@@ -1,3 +1,9 @@
+# revision 19721
+# category Package
+# catalog-ctan /fonts/inconsolata
+# catalog-date 2010-09-07 15:05:43 +0200
+# catalog-license ofl
+# catalog-version undef
 Name:		texlive-inconsolata
 Version:	20100907
 Release:	1
@@ -74,6 +80,7 @@ definition and other relevant files.
 %doc %{_texmfdistdir}/doc/fonts/inconsolata/testmin.tex
 #- source
 %doc %{_texmfdistdir}/source/fonts/inconsolata/Inconsolata.sfd
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -84,3 +91,5 @@ definition and other relevant files.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
