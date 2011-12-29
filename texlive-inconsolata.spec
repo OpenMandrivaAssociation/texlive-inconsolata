@@ -18,8 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 Inconsolata is a monospaced font designed by Raph Levien. This
@@ -27,20 +25,12 @@ package contains the font (in both Adobe Type 1 and OpenType
 formats), metric files for use with TeX, and LaTeX font
 definition and other relevant files.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -81,7 +71,6 @@ definition and other relevant files.
 %doc %{_texmfdistdir}/doc/fonts/inconsolata/testmin.tex
 #- source
 %doc %{_texmfdistdir}/source/fonts/inconsolata/Inconsolata.sfd
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -92,5 +81,3 @@ definition and other relevant files.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
