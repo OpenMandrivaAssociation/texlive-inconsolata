@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-inconsolata
 Version:	20100907
-Release:	1
+Release:	2
 Summary:	A monospaced font, with support files for use with TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/inconsolata
