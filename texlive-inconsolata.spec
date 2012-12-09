@@ -81,3 +81,17 @@ definition and other relevant files.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20100907-2
++ Revision: 752738
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100907-1
++ Revision: 718716
+- texlive-inconsolata
+- texlive-inconsolata
+- texlive-inconsolata
+- texlive-inconsolata
+
