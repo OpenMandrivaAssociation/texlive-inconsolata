@@ -1,19 +1,19 @@
-# revision 19721
+# revision 31210
 # category Package
 # catalog-ctan /fonts/inconsolata
-# catalog-date 2010-09-07 15:05:43 +0200
+# catalog-date 2013-07-16 08:16:10 +0200
 # catalog-license ofl
-# catalog-version undef
+# catalog-version 1.03
 Name:		texlive-inconsolata
-Version:	20100907
-Release:	2
+Epoch:		1
+Version:	1.03
+Release:	1
 Summary:	A monospaced font, with support files for use with TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/inconsolata
 License:	OFL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/inconsolata.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/inconsolata.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/inconsolata.source.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -22,8 +22,10 @@ Requires(post):	texlive-kpathsea
 %description
 Inconsolata is a monospaced font designed by Raph Levien. This
 package contains the font (in both Adobe Type 1 and OpenType
-formats), metric files for use with TeX, and LaTeX font
-definition and other relevant files.
+formats) in regular and bold weights, with additional glyphs
+and options to control slashed zero, upright quotes and a
+shapelier lower-case L, plus metric files for use with TeX, and
+LaTeX font definition and other relevant files.
 
 %post
     %{_sbindir}/texlive.post
@@ -35,63 +37,132 @@ definition and other relevant files.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/fonts/enc/dvips/inconsolata/fi4-ec.enc
-%{_texmfdistdir}/fonts/enc/dvips/inconsolata/fi4-ei1.enc
-%{_texmfdistdir}/fonts/enc/dvips/inconsolata/fi4-ot1tt.enc
-%{_texmfdistdir}/fonts/enc/dvips/inconsolata/fi4-qxtt.enc
-%{_texmfdistdir}/fonts/enc/dvips/inconsolata/fi4-texnansi.enc
-%{_texmfdistdir}/fonts/enc/dvips/inconsolata/fi4-ts1.enc
-%{_texmfdistdir}/fonts/map/dvips/inconsolata/fi4.map
-%{_texmfdistdir}/fonts/opentype/public/inconsolata/Inconsolata.otf
-%{_texmfdistdir}/fonts/tfm/public/inconsolata/ec-inconsolata.tfm
-%{_texmfdistdir}/fonts/tfm/public/inconsolata/ei1-inconsolata.tfm
-%{_texmfdistdir}/fonts/tfm/public/inconsolata/qx-inconsolata.tfm
-%{_texmfdistdir}/fonts/tfm/public/inconsolata/rm-inconsolata.tfm
-%{_texmfdistdir}/fonts/tfm/public/inconsolata/texnansi-inconsolata.tfm
-%{_texmfdistdir}/fonts/tfm/public/inconsolata/ts1-inconsolata.tfm
-%{_texmfdistdir}/fonts/type1/public/inconsolata/Inconsolata.pfb
-%{_texmfdistdir}/tex/latex/inconsolata/ei1fi4.fd
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-ly1-0.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-ly1-1.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-ly1-2.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-ly1-3.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-ly1-4.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-ly1-5.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-ly1-6.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-ly1-7.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-ot1-0.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-ot1-1.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-ot1-2.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-ot1-3.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-ot1-4.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-ot1-5.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-ot1-6.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-ot1-7.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-qx-0.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-qx-1.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-qx-2.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-qx-3.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-qx-4.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-qx-5.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-qx-6.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-qx-7.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-t1-0.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-t1-1.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-t1-2.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-t1-3.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-t1-4.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-t1-5.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-t1-6.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-t1-7.enc
+%{_texmfdistdir}/fonts/enc/dvips/inconsolata/i4-ts1.enc
+%{_texmfdistdir}/fonts/map/dvips/inconsolata/zi4.map
+%{_texmfdistdir}/fonts/opentype/public/inconsolata/Inconsolatazi4-Bold.otf
+%{_texmfdistdir}/fonts/opentype/public/inconsolata/Inconsolatazi4-Regular.otf
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ly1-zi4b-0.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ly1-zi4b-1.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ly1-zi4b-2.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ly1-zi4b-3.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ly1-zi4b-4.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ly1-zi4b-5.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ly1-zi4b-6.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ly1-zi4b-7.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ly1-zi4r-0.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ly1-zi4r-1.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ly1-zi4r-2.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ly1-zi4r-3.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ly1-zi4r-4.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ly1-zi4r-5.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ly1-zi4r-6.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ly1-zi4r-7.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ot1-zi4b-0.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ot1-zi4b-1.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ot1-zi4b-2.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ot1-zi4b-3.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ot1-zi4b-4.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ot1-zi4b-5.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ot1-zi4b-6.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ot1-zi4b-7.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ot1-zi4r-0.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ot1-zi4r-1.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ot1-zi4r-2.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ot1-zi4r-3.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ot1-zi4r-4.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ot1-zi4r-5.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ot1-zi4r-6.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ot1-zi4r-7.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/qx-zi4b-0.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/qx-zi4b-1.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/qx-zi4b-2.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/qx-zi4b-3.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/qx-zi4b-4.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/qx-zi4b-5.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/qx-zi4b-6.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/qx-zi4b-7.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/qx-zi4r-0.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/qx-zi4r-1.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/qx-zi4r-2.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/qx-zi4r-3.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/qx-zi4r-4.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/qx-zi4r-5.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/qx-zi4r-6.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/qx-zi4r-7.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/t1-zi4b-0.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/t1-zi4b-1.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/t1-zi4b-2.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/t1-zi4b-3.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/t1-zi4b-4.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/t1-zi4b-5.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/t1-zi4b-6.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/t1-zi4b-7.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/t1-zi4r-0.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/t1-zi4r-1.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/t1-zi4r-2.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/t1-zi4r-3.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/t1-zi4r-4.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/t1-zi4r-5.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/t1-zi4r-6.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/t1-zi4r-7.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ts1-zi4b.tfm
+%{_texmfdistdir}/fonts/tfm/public/inconsolata/ts1-zi4r.tfm
+%{_texmfdistdir}/fonts/type1/public/inconsolata/Inconsolata-zi4b.pfb
+%{_texmfdistdir}/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb
 %{_texmfdistdir}/tex/latex/inconsolata/inconsolata.sty
-%{_texmfdistdir}/tex/latex/inconsolata/ly1fi4.fd
-%{_texmfdistdir}/tex/latex/inconsolata/ot1fi4.fd
-%{_texmfdistdir}/tex/latex/inconsolata/qxfi4.fd
-%{_texmfdistdir}/tex/latex/inconsolata/t1fi4.fd
-%{_texmfdistdir}/tex/latex/inconsolata/ts1fi4.fd
-%doc %{_texmfdistdir}/doc/fonts/inconsolata/ChangeLog
-%doc %{_texmfdistdir}/doc/fonts/inconsolata/GNUmakefile
-%doc %{_texmfdistdir}/doc/fonts/inconsolata/NEWS
+%{_texmfdistdir}/tex/latex/inconsolata/ly1zi4.fd
+%{_texmfdistdir}/tex/latex/inconsolata/ot1zi4.fd
+%{_texmfdistdir}/tex/latex/inconsolata/qxzi4.fd
+%{_texmfdistdir}/tex/latex/inconsolata/t1zi4.fd
+%{_texmfdistdir}/tex/latex/inconsolata/ts1zi4.fd
+%{_texmfdistdir}/tex/latex/inconsolata/zi4.sty
+%doc %{_texmfdistdir}/doc/fonts/inconsolata/OFL.txt
 %doc %{_texmfdistdir}/doc/fonts/inconsolata/README
-%doc %{_texmfdistdir}/doc/fonts/inconsolata/fonttable.pdf
-%doc %{_texmfdistdir}/doc/fonts/inconsolata/inconsolata.pdf
-%doc %{_texmfdistdir}/doc/fonts/inconsolata/inconsolata.tex
-%doc %{_texmfdistdir}/doc/fonts/inconsolata/test-spacing.tex
-%doc %{_texmfdistdir}/doc/fonts/inconsolata/test-textless.tex
-%doc %{_texmfdistdir}/doc/fonts/inconsolata/test.pdf
-%doc %{_texmfdistdir}/doc/fonts/inconsolata/test.tex
-%doc %{_texmfdistdir}/doc/fonts/inconsolata/testmin.tex
-#- source
-%doc %{_texmfdistdir}/source/fonts/inconsolata/Inconsolata.sfd
+%doc %{_texmfdistdir}/doc/fonts/inconsolata/afmcmds.txt
+%doc %{_texmfdistdir}/doc/fonts/inconsolata/inconsolata-doc.pdf
+%doc %{_texmfdistdir}/doc/fonts/inconsolata/inconsolata-doc.tex
+%doc %{_texmfdistdir}/doc/fonts/inconsolata/novarqu-crop.pdf
+%doc %{_texmfdistdir}/doc/fonts/inconsolata/novarqu-noupq-crop.pdf
+%doc %{_texmfdistdir}/doc/fonts/inconsolata/varqu-noupq-crop.pdf
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a0 -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20100907-2
-+ Revision: 752738
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100907-1
-+ Revision: 718716
-- texlive-inconsolata
-- texlive-inconsolata
-- texlive-inconsolata
-- texlive-inconsolata
-
+cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
