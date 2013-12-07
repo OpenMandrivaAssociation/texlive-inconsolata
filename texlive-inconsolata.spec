@@ -7,7 +7,7 @@
 Name:		texlive-inconsolata
 Epoch:		1
 Version:	1.03
-Release:	1
+Release:	2
 Summary:	A monospaced font, with support files for use with TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/inconsolata
