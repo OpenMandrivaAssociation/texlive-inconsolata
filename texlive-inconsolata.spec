@@ -1,13 +1,13 @@
-# revision 31210
+# revision 32983
 # category Package
 # catalog-ctan /fonts/inconsolata
-# catalog-date 2013-07-16 08:16:10 +0200
+# catalog-date 2014-02-15 09:25:11 +0100
 # catalog-license ofl
-# catalog-version 1.03
+# catalog-version 1.04
 Name:		texlive-inconsolata
 Epoch:		1
-Version:	1.03
-Release:	5
+Version:	1.04
+Release:	1
 Summary:	A monospaced font, with support files for use with TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/inconsolata
