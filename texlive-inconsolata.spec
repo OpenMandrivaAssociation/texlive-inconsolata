@@ -1,6 +1,6 @@
 Name:		texlive-inconsolata
 Epoch:		1
-Version:	1.113
+Version:	1.114
 Release:	1
 Summary:	A monospaced font, with support files for use with TeX
 Group:		Publishing
