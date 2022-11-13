@@ -1,13 +1,13 @@
 Name:		texlive-inconsolata
 Epoch:		1
-Version:	1.121
+Version:	54512
 Release:	1
 Summary:	A monospaced font, with support files for use with TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/inconsolata
 License:	OFL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/inconsolata.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/inconsolata.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/inconsolata.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/inconsolata.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -22,12 +22,12 @@ shapelier lower-case L, plus metric files for use with TeX, and
 LaTeX font definition and other relevant files.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -41,7 +41,7 @@ LaTeX font definition and other relevant files.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
