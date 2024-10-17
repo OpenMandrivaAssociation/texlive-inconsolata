@@ -4,7 +4,7 @@ Version:	54512
 Release:	2
 Summary:	A monospaced font, with support files for use with TeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/inconsolata
+URL:		https://www.ctan.org/tex-archive/fonts/inconsolata
 License:	OFL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/inconsolata.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/inconsolata.doc.r%{version}.tar.xz
