@@ -1,9 +1,10 @@
 %global tl_name inconsolata
 %global tl_revision 79618
+%global tl_version 1.121
 
 Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	1.121
+Version:	%{tl_version}
 Release:	%{tl_revision}.1
 Summary:	A monospaced font, with support files for use with TeX
 Group:		Publishing
@@ -13,7 +14,8 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/inconsolata.r%{t
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/inconsolata.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 Inconsolata is a monospaced font designed by Raph Levien. This package
@@ -22,3 +24,10 @@ and bold weights, with additional glyphs and options to control slashed
 zero, upright quotes and a shapelier lower-case L, plus metric files for
 use with TeX, and LaTeX font definition and other relevant files.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from inconsolata:
+Map zi4.map
+TL_DROPIN_EOF
